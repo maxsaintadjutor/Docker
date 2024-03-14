@@ -2,3 +2,13 @@ Debian 12 - MEMO
 
 -----------------
 
+Direction : /etc/network/interfaces
+
+Ajout de l'ip / masque / gateway (exemple) : 
+
+iface ens33 inet static
+        address 192.168.241.133
+        netmask 255.255.255.0
+        gateway 192.168.241.255
+
+-----------------

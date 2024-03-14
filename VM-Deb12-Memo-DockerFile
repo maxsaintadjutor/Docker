@@ -1,0 +1,15 @@
+# DockerFile N°1
+
+FROM ubuntu:latest
+
+MAINTAINER Maxime "maxsaintadjutor"
+
+RUN apt-get update
+
+CMD ["echo", première image docker de test"]
+
+
+------------------------------
+
+root@Debian12Docker:/home/max# nano Dockerfile
+root@Debian12Docker:/home/max# docker build -t imagedetest:1.0 .

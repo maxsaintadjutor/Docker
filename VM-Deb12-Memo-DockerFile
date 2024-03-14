@@ -15,3 +15,19 @@ root@Debian12Docker:/home/max# nano Dockerfile
 root@Debian12Docker:/home/max# docker build -t imagedetest:1.0 .
 root@Debian12Docker:/home/max# docker images
 root@Debian12Docker:/home/max# docker run dc426863ae7c
+
+--------------------
+(docker-compose.yml)
+
+version: "3"
+services:
+  website:
+    image: nginx:latest
+    ports:
+      - "8081:80"
+    restart: always
+  website2:
+    image: nginx:latest
+    ports:
+      - "8082:80"
+    restart: always

@@ -6,7 +6,7 @@ MAINTAINER Maxime "maxsaintadjutor"
 
 RUN apt-get update
 
-CMD ["echo", première image docker de test"]
+CMD ["echo", "première image docker de test"]
 
 
 ------------------------------

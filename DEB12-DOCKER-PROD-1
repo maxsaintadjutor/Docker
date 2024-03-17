@@ -1,0 +1,25 @@
+
+# Configuration ip statique
+nano /etc/network/interfaces
+
+------------------------------
+iface ens192 inet static
+        address 192.168.1.200
+        netmask 255.255.255.0
+        gateway 192.168.1.254
+-------------------------------
+# Mise à jour système
+apt update && apt full-upgrade -y
+
+# Installation docker
+apt install docker.io -y
+
+# Création dossiers
+mkdir /docker/portainer
+mkdir /docker/portainer/data
+
+# Commande docker à run
+docker run -d --name portainer -p 9443:9443 -v /var/run/docker.sock:/var/run/docker.sock -v /docker/portainer/data:/data --restart=unless-stopped portainer/portainer-ce:latest
+
+# Vérification
+docker ps

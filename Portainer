@@ -1,0 +1,9 @@
+# Création dossiers
+root@DEB12-DOCKER-PROD-1:/# mkdir /docker/portainer
+root@DEB12-DOCKER-PROD-1:/# mkdir /docker/portainer/data
+
+# Commande docker à run
+docker run -d -p 8000:8000 --name portainer -p 9443:9443 -v /var/run/docker.sock:/var/run/docker.sock -v /docker/portainer/data:/data --restart=unless-stopped portainer/portainer-ce:latest
+
+# Vérification
+docker ps
